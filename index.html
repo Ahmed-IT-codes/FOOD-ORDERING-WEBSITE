@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FoodieHub - Fresh and delicious food delivered to your door.">
+  <title>FoodieHub | Delicious Food Delivered</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <a href="#home" class="logo">
+      Foodie<span>Hub.</span>
+    </a>
+
+    <nav id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode">
+        🌙
+      </button>
+
+      <button id="cartBtn" class="cart-btn">
+        🛒 Cart
+        <span id="cartCount">0</span>
+      </button>
+
+      <button id="menuBtn" class="menu-btn" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          FRESH • TASTY • DELIVERED
+        </span>
+
+        <h1>
+          Your cravings,
+          our <span>creation.</span>
+        </h1>
+
+        <p>
+          Delicious food made with fresh ingredients,
+          expert chefs and a little extra happiness in every bite.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#menu" class="primary-btn">
+            Explore Menu →
+          </a>
+
+          <a href="#about" class="secondary-btn">
+            Learn More
+          </a>
+        </div>
+
+        <div class="hero-stats">
+
+          <div>
+            <strong>20+</strong>
+            <small>Food options</small>
+          </div>
+
+          <div>
+            <strong>4.9★</strong>
+            <small>Customer rating</small>
+          </div>
+
+          <div>
+            <strong>100%</strong>
+            <small>Fresh ingredients</small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85"
+          alt="Delicious pizza"
+        >
+
+        <div class="floating-card">
+          ⭐ 4.9
+          <small>Customer favorite</small>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+
+      <div>
+        🥬
+        <span>
+          <strong>Fresh Ingredients</strong>
+          <small>Quality in every bite</small>
+        </span>
+      </div>
+
+      <div>
+        👨‍🍳
+        <span>
+          <strong>Expert Chefs</strong>
+          <small>Prepared fresh daily</small>
+        </span>
+      </div>
+
+      <div>
+        🚀
+        <span>
+          <strong>Fast Delivery</strong>
+          <small>Hot food at your door</small>
+        </span>
+      </div>
+
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+
+      <div class="section-heading">
+
+        <span class="eyebrow">
+          WHAT WE SERVE
+        </span>
+
+        <h2>
+          Explore our <span>menu.</span>
+        </h2>
+
+        <p>
+          Choose your favorite food and build your perfect meal.
+        </p>
+
+      </div>
+
+
+      <!-- SEARCH -->
+      <div class="menu-tools">
+
+        <div class="search-box">
+
+          <span>🔍</span>
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search pizza, burger, pasta..."
+            aria-label="Search food"
+          >
+
+        </div>
+
+
+        <!-- FILTERS -->
+        <div class="filters" id="filters">
+
+          <button class="filter-btn active" data-category="All">
+            All
+          </button>
+
+          <button class="filter-btn" data-category="Pizza">
+            🍕 Pizza
+          </button>
+
+          <button class="filter-btn" data-category="Burger">
+            🍔 Burgers
+          </button>
+
+          <button class="filter-btn" data-category="Pasta">
+            🍝 Pasta
+          </button>
+
+          <button class="filter-btn" data-category="Sides">
+            🍟 Sides
+          </button>
+
+          <button class="filter-btn" data-category="Drinks">
+            🥤 Drinks
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOD CARDS -->
+      <div class="food-grid" id="foodGrid"></div>
+
+      <div id="emptyMessage" class="empty-message" hidden>
+        <div>🍽️</div>
+        <h3>No food found</h3>
+        <p>Try another search or category.</p>
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+
+      <div class="about-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=85"
+          alt="Chef preparing food"
+        >
+
+      </div>
+
+
+      <div class="about-content">
+
+        <span class="eyebrow">
+          ABOUT FOODIEHUB
+        </span>
+
+        <h2>
+          Good food.
+          <br>
+          Great mood. ❤️
+        </h2>
+
+        <p>
+          At FoodieHub, we believe every meal deserves to be special.
+          Our goal is simple: serve delicious food made with quality
+          ingredients and bring happiness to every customer.
+        </p>
+
+        <div class="about-points">
+
+          <div>
+            ✓
+            <span>Fresh ingredients</span>
+          </div>
+
+          <div>
+            ✓
+            <span>Professional chefs</span>
+          </div>
+
+          <div>
+            ✓
+            <span>Fast & reliable service</span>
+          </div>
+
+        </div>
+
+        <a href="#menu" class="primary-btn">
+          Order Something Delicious →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+
+      <div>
+
+        <span class="eyebrow">
+          READY TO ORDER?
+        </span>
+
+        <h2>
+          Your next favorite meal
+          is waiting. 🍕
+        </h2>
+
+        <p>
+          Browse our menu and order something delicious today.
+        </p>
+
+        <a href="#menu" class="primary-btn">
+          Start Ordering →
+        </a>
+
+      </div>
+
+      <div class="cta-emoji">
+        🍔
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-content">
+
+      <div>
+
+        <a href="#home" class="logo">
+          Foodie<span>Hub.</span>
+        </a>
+
+        <p>
+          Delicious food made with love.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> FoodieHub. Portfolio project.
+    </div>
+
+  </footer>
+
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+
+  <!-- CART -->
+  <aside
+    class="cart-panel"
+    id="cartPanel"
+    aria-hidden="true"
+  >
+
+    <div class="cart-header">
+
+      <div>
+
+        <span class="eyebrow">
+          YOUR ORDER
+        </span>
+
+        <h2>Your Cart 🛒</h2>
+
+      </div>
+
+      <button
+        id="closeCart"
+        class="icon-btn"
+        aria-label="Close cart"
+      >
+        ✕
+      </button>
+
+    </div>
+
+
+    <div id="cartItems" class="cart-items"></div>
+
+
+    <div class="cart-summary">
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong id="subtotal">Rs. 0</strong>
+      </div>
+
+      <div class="summary-row">
+        <span>Delivery</span>
+        <strong id="delivery">Rs. 0</strong>
+      </div>
+
+      <div class="summary-row discount-row">
+        <span>Discount</span>
+        <strong id="discount">Rs. 0</strong>
+      </div>
+
+
+      <div class="coupon-box">
+
+        <input
+          type="text"
+          id="couponInput"
+          placeholder="Coupon code"
+        >
+
+        <button id="applyCoupon">
+          Apply
+        </button>
+
+      </div>
+
+      <p id="couponMessage" class="form-message">
+        Try FOOD10 for 10% off.
+      </p>
+
+
+      <div class="summary-row total-row">
+
+        <span>Total</span>
+
+        <strong id="total">
+          Rs. 0
+        </strong>
+
+      </div>
+
+
+      <button
+        id="checkoutBtn"
+        class="primary-btn checkout-btn"
+      >
+        Proceed to Checkout →
+      </button>
+
+      <small class="demo-note">
+        Portfolio demo — no real payment is collected.
+      </small>
+
+    </div>
+
+  </aside>
+
+
+  <!-- CHECKOUT MODAL -->
+  <div
+    class="modal"
+    id="checkoutModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-content">
+
+      <button
+        id="closeCheckout"
+        class="icon-btn modal-close"
+      >
+        ✕
+      </button>
+
+      <span class="eyebrow">
+        ALMOST THERE!
+      </span>
+
+      <h2>
+        Complete your order
+      </h2>
+
+      <p>
+        Enter your details to place your demo order.
+      </p>
+
+
+      <form id="checkoutForm">
+
+        <label for="customerName">
+          Full Name
+        </label>
+
+        <input
+          id="customerName"
+          type="text"
+          required
+          minlength="2"
+          placeholder="Enter your name"
+        >
+
+
+        <label for="customerPhone">
+          Phone Number
+        </label>
+
+        <input
+          id="customerPhone"
+          type="tel"
+          required
+          pattern="[0-9+\-\s()]{7,20}"
+          placeholder="03XXXXXXXXX"
+        >
+
+
+        <label for="customerAddress">
+          Delivery Address
+        </label>
+
+        <textarea
+          id="customerAddress"
+          required
+          minlength="8"
+          rows="3"
+          placeholder="House, street, area..."
+        ></textarea>
+
+
+        <label for="paymentMethod">
+          Payment Method
+        </label>
+
+        <select id="paymentMethod">
+
+          <option>
+            Cash on Delivery
+          </option>
+
+          <option>
+            Card Payment (Demo)
+          </option>
+
+        </select>
+
+
+        <button
+          type="submit"
+          class="primary-btn checkout-btn"
+        >
+          Place Order 🎉
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- SUCCESS MODAL -->
+  <div
+    class="modal"
+    id="successModal"
+    aria-hidden="true"
+  >
+
+    <div class="success-content">
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+      <h2>
+        Order Confirmed!
+      </h2>
+
+      <p id="successMessage">
+        Your order has been placed successfully.
+      </p>
+
+      <button
+        id="successClose"
+        class="primary-btn"
+      >
+        Continue Shopping
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+  ></div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
